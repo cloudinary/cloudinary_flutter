@@ -4,6 +4,7 @@ Cloudinary Flutter SDK
 ## About
 The Cloudinary Flutter SDK allows you to quickly and easily integrate your application with Cloudinary.
 Effortlessly optimize and transform your cloud's assets.
+
 The Flutter SDK is wrapper around the [Cloudinary Dart SDK](https://github.com/cloudinary/cloudinary_dart)
 
 ### Note
