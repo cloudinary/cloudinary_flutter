@@ -36,9 +36,10 @@ dependencies:
 
 ## Usage
 ### Setup
+When setting up your Flutter app, you’ll import the Dart library that was installed as part of your Flutter installation.
 The `Cloudinary` class is the main entry point for using the library. Your `cloud_name` is required to create an instance of this class. Your `api_key` and `api_secret` are also needed to perform secure API calls to Cloudinary (e.g., image and video uploads). Setting the configuration parameters can be done either programmatically using an appropriate constructor of the Cloudinary class or globally using an environment variable. You can find your account-specific configuration parameters in the **Dashboard** page of your [account console](https://cloudinary.com/console).
 
-Here's an example of setting configuration parameters in your Flutter application:
+Here’s an example of setting configuration parameters in your Flutter application:
 
 ```dart
 import 'package:cloudinary_dart/src/cloudinary.dart';
