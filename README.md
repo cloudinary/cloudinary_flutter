@@ -65,8 +65,6 @@ You can use Cloudinary's image widget to inject attributes into the widget:
 ),
 ```
 
-
-
 ## Contributions
 See [contributing guidelines](/CONTRIBUTING.md).
 
