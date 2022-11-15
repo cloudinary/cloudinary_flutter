@@ -4,12 +4,17 @@ version: 0.0.1
 homepage: https://www.cloudinary.com
 repository: https://github.com/cloudinary/cloudinary_flutter
 
+
 environment:
   sdk: '>=2.18.1 <3.0.0'
 
 dependencies:
-  cloudinary_dart: ^0.0.3
+  flutter:
+    sdk: flutter
+  cloudinary_dart: ^0.0.6
 
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
   lints: ^2.0.0
   test: ^1.16.0
