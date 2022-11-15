@@ -15,8 +15,8 @@ This Readme provides basic installation and usage information.
 - [Version Support](#Version-Support)
 - [Installation](#installation)
 - [Usage](#usage)
-    - [Setup](#Setup)
-    - [Transform and Optimize Assets](#Transform-and-Optimize-Assets)
+  - [Setup](#Setup)
+  - [Transform and Optimize Assets](#Transform-and-Optimize-Assets)
 
 ## Key Features
 Transform and optimize assets. Visit our documentation to learn more about [media optimization](https://cloudinary.com/documentation/media_optimization) and [transformations](https://cloudinary.com/documentation/image_transformations).
@@ -32,6 +32,7 @@ To use this SDK, add cloudinary as a [dependency in your pubspec.yaml file](http
 ```yaml
 dependencies:
   cloudinary_flutter: ^0.0.1
+  cloudinary_dart: ^0.0.6
 ```
 
 ## Usage
@@ -42,9 +43,7 @@ The `Cloudinary` class is the main entry point for using the library. Your `clou
 Here’s an example of setting configuration parameters in your Flutter application:
 
 ```dart
-import 'package:cloudinary_dart/src/cloudinary.dart';
-
-var cloudinary = Cloudinary.withStringUrl('cloudinary://<your-api-key>:<your-api-secret>@<your-cloud-name>');
+CloudinaryContext.cloudinary = Cloudinary.withStringUrl('cloudinary://<API_KEY>:<API_SECRET>@demo');
 ```
 
 ### Transform and Optimize Assets
@@ -56,6 +55,17 @@ For example, to generate a url for an image called `sample` on the `demo` accoun
 ```dart
 String url = cloudinary.image().generate('sample.jpg');
 ```
+
+You can use Cloudinary's image widget to inject attributes into our image widget:
+```dart
+ CldImageWidget(
+  'sample',
+  transformation: Transformation()
+  ..resize(Resize.scale()..width(500)),
+),
+```
+
+
 
 ## Contributions
 See [contributing guidelines](/CONTRIBUTING.md).
