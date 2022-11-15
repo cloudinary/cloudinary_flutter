@@ -5,7 +5,7 @@ Cloudinary Flutter SDK
 The Cloudinary Flutter SDK allows you to quickly and easily integrate your application with Cloudinary.
 Effortlessly optimize and transform your cloud's assets.
 
-The Flutter SDK is wrapper around the [Cloudinary Dart SDK](https://github.com/cloudinary/cloudinary_dart), with Flutter specific features soon to be added.
+The Flutter SDK is based on the [Cloudinary Dart SDK](https://github.com/cloudinary/cloudinary_dart), with additional Flutter specific features.
 
 ### Note
 This Readme provides basic installation and usage information.
@@ -27,7 +27,7 @@ Transform and optimize assets. Visit our documentation to learn more about [medi
 | 0.0.1       | > 1.0           | 
 
 ## Installation
-To use this SDK, add cloudinary as a [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
+To use this SDK, add the Flutter and Dart Cloudinary libraries as [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
 
 ```yaml
 dependencies:
@@ -37,7 +37,6 @@ dependencies:
 
 ## Usage
 ### Setup
-When setting up your Flutter app, you’ll import the Dart library that was installed as part of your Flutter installation.
 The `Cloudinary` class is the main entry point for using the library. Your `cloud_name` is required to create an instance of this class. Your `api_key` and `api_secret` are also needed to perform secure API calls to Cloudinary (e.g., image and video uploads). Setting the configuration parameters can be done either programmatically using an appropriate constructor of the Cloudinary class or globally using an environment variable. You can find your account-specific configuration parameters in the **Dashboard** page of your [account console](https://cloudinary.com/console).
 
 Here’s an example of setting configuration parameters in your Flutter application:
@@ -50,18 +49,13 @@ CloudinaryContext.cloudinary = Cloudinary.withStringUrl('cloudinary://<API_KEY>:
 
 Generate a Cloudinary URL using the `cloudinary.media` helper method and pass this to your image or video view:
 
-For example, to generate a url for an image called `sample` on the `demo` account:
+For example, to generate a url for an image called `sample` using Cloudinary's image widget:
 
-```dart
-String url = cloudinary.image().generate('sample.jpg');
-```
-
-You can use Cloudinary's image widget to inject attributes into the widget:
 ```dart
  CldImageWidget(
-  publidId: 'sample',
-  transformation: Transformation()
-  ..resize(Resize.scale()..width(500)),
+publidId: 'sample',
+transformation: Transformation()
+..resize(Resize.scale()..width(500)),
 ),
 ```
 
