@@ -5,8 +5,9 @@ import 'cloudinary_context.dart';
 
 class CldImageWidget extends StatefulWidget {
   late final CldImage image;
-  CldImageWidget(String publicId,
-      {super.key,
+  CldImageWidget(
+      {required String publicId,
+      super.key,
       String? version,
       String? extension,
       String? urlSuffix,
