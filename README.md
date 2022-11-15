@@ -56,10 +56,10 @@ For example, to generate a url for an image called `sample` on the `demo` accoun
 String url = cloudinary.image().generate('sample.jpg');
 ```
 
-You can use Cloudinary's image widget to inject attributes into our image widget:
+You can use Cloudinary's image widget to inject attributes into the widget:
 ```dart
  CldImageWidget(
-  'sample',
+  publidId: 'sample',
   transformation: Transformation()
   ..resize(Resize.scale()..width(500)),
 ),
