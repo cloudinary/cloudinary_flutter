@@ -53,9 +53,9 @@ For example, to generate a url for an image called `sample` using Cloudinary's i
 
 ```dart
  CldImageWidget(
-publidId: 'sample',
-transformation: Transformation()
-..resize(Resize.scale()..width(500)),
+  publidId: 'sample',
+  transformation: Transformation()
+  ..resize(Resize.scale()..width(500)),
 ),
 ```
 
