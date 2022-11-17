@@ -5,7 +5,7 @@ Cloudinary Flutter SDK
 The Cloudinary Flutter SDK allows you to quickly and easily integrate your application with Cloudinary.
 Effortlessly optimize and transform your cloud's assets.
 
-The Flutter SDK is wrapper around the [Cloudinary Dart SDK](https://github.com/cloudinary/cloudinary_dart), with Flutter specific features soon to be added.
+The Flutter SDK is based on the [Cloudinary Dart SDK](https://github.com/cloudinary/cloudinary_dart), with additional Flutter specific features.
 
 ### Note
 This Readme provides basic installation and usage information.
@@ -15,8 +15,8 @@ This Readme provides basic installation and usage information.
 - [Version Support](#Version-Support)
 - [Installation](#installation)
 - [Usage](#usage)
-    - [Setup](#Setup)
-    - [Transform and Optimize Assets](#Transform-and-Optimize-Assets)
+  - [Setup](#Setup)
+  - [Transform and Optimize Assets](#Transform-and-Optimize-Assets)
 
 ## Key Features
 Transform and optimize assets. Visit our documentation to learn more about [media optimization](https://cloudinary.com/documentation/media_optimization) and [transformations](https://cloudinary.com/documentation/image_transformations).
@@ -27,34 +27,36 @@ Transform and optimize assets. Visit our documentation to learn more about [medi
 | 0.0.1       | > 1.0           | 
 
 ## Installation
-To use this SDK, add cloudinary as a [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
+To use this SDK, add the Flutter and Dart Cloudinary libraries as [dependencies in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
 
 ```yaml
 dependencies:
   cloudinary_flutter: ^0.0.1
+  cloudinary_dart: ^0.0.6
 ```
 
 ## Usage
 ### Setup
-When setting up your Flutter app, you’ll import the Dart library that was installed as part of your Flutter installation.
 The `Cloudinary` class is the main entry point for using the library. Your `cloud_name` is required to create an instance of this class. Your `api_key` and `api_secret` are also needed to perform secure API calls to Cloudinary (e.g., image and video uploads). Setting the configuration parameters can be done either programmatically using an appropriate constructor of the Cloudinary class or globally using an environment variable. You can find your account-specific configuration parameters in the **Dashboard** page of your [account console](https://cloudinary.com/console).
 
 Here’s an example of setting configuration parameters in your Flutter application:
 
 ```dart
-import 'package:cloudinary_dart/src/cloudinary.dart';
-
-var cloudinary = Cloudinary.withStringUrl('cloudinary://<your-api-key>:<your-api-secret>@<your-cloud-name>');
+CloudinaryContext.cloudinary = Cloudinary.fromCloudName(cloudName: 'demo');
 ```
 
 ### Transform and Optimize Assets
 
 Generate a Cloudinary URL using the `cloudinary.media` helper method and pass this to your image or video view:
 
-For example, to generate a url for an image called `sample` on the `demo` account:
+For example, to generate a url for an image called `sample` using Cloudinary's image widget:
 
 ```dart
-String url = cloudinary.image().generate('sample.jpg');
+ CldImageWidget(
+  publidId: 'sample',
+  transformation: Transformation()
+  ..resize(Resize.scale()..width(500)),
+),
 ```
 
 ## Contributions
