@@ -8,7 +8,7 @@ environment:
   sdk: '>=2.18.1 <3.0.0'
 
 dependencies:
-  cloudinary_dart: ^0.0.3
+  cloudinary_dart: ^0.0.7
 
 dev_dependencies:
   lints: ^2.0.0
