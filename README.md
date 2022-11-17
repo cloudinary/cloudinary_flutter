@@ -32,7 +32,7 @@ To use this SDK, add the Flutter and Dart Cloudinary libraries as [dependencies 
 ```yaml
 dependencies:
   cloudinary_flutter: ^0.0.1
-  cloudinary_dart: ^0.0.6
+  cloudinary_dart: ^0.0.7
 ```
 
 ## Usage
