@@ -1,8 +1,4 @@
 import 'package:cloudinary_dart/cloudinary.dart';
-import 'package:cloudinary_dart/transformation/delivery/delivery.dart';
-import 'package:cloudinary_dart/transformation/delivery/delivery_actions.dart';
-import 'package:cloudinary_dart/transformation/transformation.dart';
-import 'package:cloudinary_flutter/cloudinary_context.dart';
 import 'package:test/scaffolding.dart';
 
 void main() {
@@ -15,10 +11,6 @@ void main() {
       assert("123456123456123" == cloudinary.config.cloudConfig.apiKey);
       assert("3Sf3FAdasa2easdFGDS3afADFS2" ==
           cloudinary.config.cloudConfig.apiSecret);
-      String url = (CloudinaryContext.cloudinary.image('dog')
-            ..transformation(
-                Transformation()..delivery(Delivery.quality(Quality.auto))))
-          .toString();
     });
   });
 }
