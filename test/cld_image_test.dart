@@ -13,7 +13,7 @@ void main() {
   CloudinaryContext.cloudinary.config.urlConfig.analytics = false;
   setUpAll(() => HttpOverrides.global = null);
   testWidgets('Test CldImageWidget has valid url', (widgetTester) async {
-    var widget = CldImageWidget(publicId: 'dog');
+    var widget = CldImageWidget(publicId: 'dog', width: 500, height: 100);
     await widgetTester.pumpWidget(widget);
 
     final imageFinder = find.image(
