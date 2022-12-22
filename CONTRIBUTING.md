@@ -4,7 +4,7 @@ Contributions are welcome and greatly appreciated!
 
 ## Reporting a bug
 
-- Make sure that the bug was not already reported by searching in GitHub under [Issues](https://github.com/cloudinary/cloudinary_flutter) and the Cloudinary [Support forms](https://support.cloudinary.com).
+- Make sure that the bug was not already reported by searching in GitHub under [Issues](https://github.com/cloudinary/cloudinary_flutter/issues) and the Cloudinary [Support forms](https://support.cloudinary.com).
 - If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/cloudinary/cloudinary_flutter/issues/new).
   Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** or an **executable test case** demonstrating the expected behavior that is not occurring.
 - If you need help using `cloudinary_flutter` please [submit a request](https://support.cloudinary.com/hc/en-us/requests/new) on Cloudinary's site.
