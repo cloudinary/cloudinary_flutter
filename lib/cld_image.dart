@@ -54,12 +54,24 @@ class CldImageWidget extends Image {
             isAntiAlias: isAntiAlias,
             filterQuality: filterQuality) {
     cldImage = CloudinaryContext.cloudinary.image(publicId);
-    ((version != null) ? cldImage.version(version) : null);
-    ((extension != null) ? cldImage.extension(extension) : null);
-    ((urlSuffix != null) ? cldImage.urlSuffix(urlSuffix) : null);
-    ((assetType != null) ? cldImage.assetType(assetType) : null);
-    ((deliveryType != null) ? cldImage.deliveryType(deliveryType) : null);
-    ((transformation != null) ? cldImage.transformation(transformation) : null);
+    if (version != null) {
+      cldImage.version(version);
+    }
+    if (extension != null) {
+      cldImage.extension(extension);
+    }
+    if (urlSuffix != null) {
+      cldImage.urlSuffix(urlSuffix);
+    }
+    if (assetType != null) {
+      cldImage.assetType(assetType);
+    }
+    if (deliveryType != null) {
+      cldImage.deliveryType(deliveryType);
+    }
+    if (transformation != null) {
+      cldImage.transformation(transformation);
+    }
   }
 
   @override
