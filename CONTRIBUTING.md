@@ -14,7 +14,7 @@ Contributions are welcome and greatly appreciated!
 We would love to receive your requests!
 Please be aware that the library is used in a wide variety of environments and that some features may not be applicable to all users.
 
-- Open a GitHub [issue](https://github.com/cloudinary/cloudinary_flutter) describing the benefits (and possible drawbacks) of the requested feature.
+- Open a GitHub [issue](https://github.com/cloudinary/cloudinary_flutter/issues) describing the benefits (and possible drawbacks) of the requested feature.
 
 ## Fixing a bug / Implementing a new feature
 
@@ -60,7 +60,7 @@ We definitely appreciate pull requests that highlight or reproduce a problem, ev
 #### Write code
 
 Implement your feature or bug fix.
-Follow the following Dart coding standards
+Follow the following [Dart coding standards](https://dart.dev/guides/language/effective-dart)
 
 #### Write Documentation
 
