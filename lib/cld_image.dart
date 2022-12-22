@@ -3,7 +3,13 @@ import 'package:cloudinary_dart/transformation/transformation.dart';
 import 'package:flutter/widgets.dart';
 import 'cloudinary_context.dart';
 
+/// A widget that displays an image.
+/// A constructor with multiple attributes provided for the various ways that an image can be
+/// The widget is meant to display an image from the Cloudinary's cloud
+/// The [publicId] field should not be null and must be provided.
 class CldImageWidget extends Image {
+  /// Cloudinary image object
+  /// This object holds all of Cloudinary's attributes.
   late final CldImage cldImage;
 
   CldImageWidget(
