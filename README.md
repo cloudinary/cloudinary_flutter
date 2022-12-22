@@ -24,14 +24,14 @@ Transform and optimize assets. Visit our documentation to learn more about [medi
 ## Version Support
 | SDK Version | Flutter Version |
 |-------------|-----------------|
-| 0.0.3       | > 1.0           | 
+| 0.0.4       | > 1.0           | 
 
 ## Installation
 To use this SDK, add the Flutter and Dart Cloudinary libraries as [dependencies in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
 
 ```yaml
 dependencies:
-  cloudinary_flutter: ^0.0.3
+  cloudinary_flutter: ^0.0.4
   cloudinary_dart: ^0.0.7
 ```
 
