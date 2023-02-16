@@ -1,7 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloudinary_dart/asset/cld_image.dart';
 import 'package:cloudinary_dart/transformation/transformation.dart';
 import 'package:flutter/widgets.dart';
-import 'cloudinary_context.dart';
+import '../cloudinary_context.dart';
+import 'cld_image_widget_configuration.dart';
 
 /// A widget that displays an image.
 /// A constructor with multiple attributes provided for the various ways that an image can be
@@ -11,6 +13,7 @@ class CldImageWidget extends Image {
   /// Cloudinary image object
   /// This object holds all of Cloudinary's attributes.
   late final CldImage cldImage;
+  late final CldImageWidgetConfiguration configuration;
 
   CldImageWidget(
       {required String publicId,
@@ -24,6 +27,7 @@ class CldImageWidget extends Image {
       ImageFrameBuilder? frameBuilder,
       ImageLoadingBuilder? loadingBuilder,
       ImageErrorWidgetBuilder? errorBuilder,
+      CldImageWidgetConfiguration? configuration,
       String? semanticLabel,
       bool excludeFromSemantics = false,
       double? width,
@@ -60,6 +64,7 @@ class CldImageWidget extends Image {
             isAntiAlias: isAntiAlias,
             filterQuality: filterQuality) {
     cldImage = CloudinaryContext.cloudinary.image(publicId);
+    this.configuration = configuration ?? CldImageWidgetConfiguration();
     if (version != null) {
       cldImage.version(version);
     }
@@ -89,6 +94,10 @@ class CldImageWidget extends Image {
 class _CldImageState extends State<CldImageWidget> {
   @override
   Widget build(BuildContext context) {
-    return Image.network(widget.cldImage.toString());
+    if (widget.configuration?.cache ?? true) {
+      return CachedNetworkImage(imageUrl: widget.cldImage.toString());
+    } else {
+      return Image.network(widget.cldImage.toString());
+    }
   }
 }

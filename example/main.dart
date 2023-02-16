@@ -1,5 +1,5 @@
 import 'package:cloudinary_dart/cloudinary.dart';
-import 'package:cloudinary_flutter/cld_image.dart';
+import 'package:cloudinary_flutter/image/cld_image.dart';
 import 'package:cloudinary_flutter/cloudinary_context.dart';
 import 'package:flutter/material.dart';
 
