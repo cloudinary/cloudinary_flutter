@@ -113,24 +113,3 @@ class _CldImageState extends State<CldImageWidget> {
     );
   }
 }
-
-/**
- * frameBuilder: frameBuilder,
-    loadingBuilder: loadingBuilder,
-    errorBuilder: errorBuilder,
-    semanticLabel: semanticLabel,
-    excludeFromSemantics: excludeFromSemantics,
-    width: width,
-    height: height,
-    color: color,
-    opacity: opacity,
-    colorBlendMode: colorBlendMode,
-    fit: fit,
-    alignment: alignment,
-    repeat: repeat,
-    centerSlice: centerSlice,
-    matchTextDirection: matchTextDirection,
-    gaplessPlayback: gaplessPlayback,
-    isAntiAlias: isAntiAlias,
-    filterQuality: filterQuality
- */
