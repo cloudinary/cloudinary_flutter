@@ -59,15 +59,6 @@ For example, to generate a url for an image called `sample` using Cloudinary's i
 ),
 ```
 
-If you want to use the cache mechanism as well:
-```dart
- CldImageCached(
-  publicId: 'sample'
-  transformation: Transformation()
-  ..resize(Resize.scale()..width(500)),
- ),
-```
-
 ## Contributions
 See [contributing guidelines](/CONTRIBUTING.md).
 
