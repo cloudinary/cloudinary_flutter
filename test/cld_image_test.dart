@@ -6,8 +6,6 @@ import 'package:cloudinary_dart/transformation/resize/resize.dart';
 import 'package:cloudinary_dart/transformation/transformation.dart';
 import 'package:cloudinary_flutter/image/cld_image.dart';
 import 'package:cloudinary_flutter/cloudinary_context.dart';
-import 'package:cloudinary_flutter/image/cld_image_widget_configuration.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -20,15 +18,6 @@ void main() {
 
     final imageFinder = find.image(
         CachedNetworkImageProvider('https://res.cloudinary.com/demo/image/upload/dog'));
-    expect(imageFinder, findsOneWidget);
-  });
-
-  testWidgets('Test CldImageWidget without cache', (widgetTester) async {
-    var widget = CldImageWidget(publicId: 'dog', configuration: CldImageWidgetConfiguration(cache: false), width: 500, height: 100);
-    await widgetTester.pumpWidget(widget);
-
-    final imageFinder = find.image(
-        NetworkImage('https://res.cloudinary.com/demo/image/upload/dog'));
     expect(imageFinder, findsOneWidget);
   });
 

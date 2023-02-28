@@ -1,70 +1,67 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloudinary_dart/asset/cld_image.dart';
 import 'package:cloudinary_dart/transformation/transformation.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/cupertino.dart';
+
 import '../cloudinary_context.dart';
-import 'cld_image_widget_configuration.dart';
 
 /// A widget that displays an image.
 /// A constructor with multiple attributes provided for the various ways that an image can be
 /// The widget is meant to display an image from the Cloudinary's cloud
 /// The [publicId] field should not be null and must be provided.
-class CldImageWidget extends Image {
+class CldImageWidget extends CachedNetworkImage {
   /// Cloudinary image object
   /// This object holds all of Cloudinary's attributes.
   late final CldImage cldImage;
-  late final CldImageWidgetConfiguration configuration;
 
   CldImageWidget(
       {required String publicId,
-      super.key,
-      String? version,
-      String? extension,
-      String? urlSuffix,
-      String? assetType,
-      String? deliveryType,
-      Transformation? transformation,
-      ImageFrameBuilder? frameBuilder,
-      ImageLoadingBuilder? loadingBuilder,
-      ImageErrorWidgetBuilder? errorBuilder,
-      CldImageWidgetConfiguration? configuration,
-      String? semanticLabel,
-      bool excludeFromSemantics = false,
-      double? width,
-      double? height,
-      Color? color,
-      Animation<double>? opacity,
-      BlendMode? colorBlendMode,
-      BoxFit? fit,
-      AlignmentGeometry alignment = Alignment.center,
-      ImageRepeat repeat = ImageRepeat.noRepeat,
-      Rect? centerSlice,
-      bool matchTextDirection = false,
-      bool gaplessPlayback = false,
-      bool isAntiAlias = false,
-      FilterQuality filterQuality = FilterQuality.low})
+        super.key,
+        String? version,
+        String? extension,
+        String? urlSuffix,
+        String? assetType,
+        String? deliveryType,
+        Transformation? transformation,
+        Map<String, String>? httpHeaders,
+        ImageWidgetBuilder? imageBuilder,
+        PlaceholderWidgetBuilder? placeholder,
+        LoadingErrorWidgetBuilder? errorBuilder,
+        Duration? placeholderFadeInDuration,
+        int? memCacheWidth,
+        int? memCacheHeight,
+        String? cacheKey,
+        int? maxWidthDiskCache,
+        int? maxHeightDiskCache,
+        double? width,
+        double? height,
+        Color? color,
+        BlendMode? colorBlendMode,
+        BoxFit? fit,
+        ImageRepeat repeat = ImageRepeat.noRepeat,
+        FilterQuality filterQuality = FilterQuality.low,
+        bool matchTextDirection = false})
       : super(
-            image: NetworkImage(''),
-            frameBuilder: frameBuilder,
-            loadingBuilder: loadingBuilder,
-            errorBuilder: errorBuilder,
-            semanticLabel: semanticLabel,
-            excludeFromSemantics: excludeFromSemantics,
-            width: width,
-            height: height,
-            color: color,
-            opacity: opacity,
-            colorBlendMode: colorBlendMode,
-            fit: fit,
-            alignment: alignment,
-            repeat: repeat,
-            centerSlice: centerSlice,
-            matchTextDirection: matchTextDirection,
-            gaplessPlayback: gaplessPlayback,
-            isAntiAlias: isAntiAlias,
-            filterQuality: filterQuality) {
+      imageUrl: '',
+      httpHeaders: httpHeaders,
+      imageBuilder: imageBuilder,
+      placeholder: placeholder,
+      errorWidget: errorBuilder,
+      width: width,
+      height: height,
+      color: color,
+      filterQuality: filterQuality,
+      colorBlendMode: colorBlendMode,
+      placeholderFadeInDuration: placeholderFadeInDuration,
+      memCacheWidth: memCacheWidth,
+      memCacheHeight: memCacheHeight,
+      cacheKey: cacheKey,
+      maxWidthDiskCache: maxWidthDiskCache,
+      maxHeightDiskCache: maxHeightDiskCache,
+      fit: fit,
+      repeat: repeat,
+      matchTextDirection: matchTextDirection) {
     cldImage = CloudinaryContext.cloudinary.image(publicId);
-    this.configuration = configuration ?? CldImageWidgetConfiguration();
     if (version != null) {
       cldImage.version(version);
     }
@@ -86,18 +83,26 @@ class CldImageWidget extends Image {
   }
 
   @override
-  State<Image> createState() {
-    return _CldImageState();
-  }
-}
-
-class _CldImageState extends State<CldImageWidget> {
-  @override
   Widget build(BuildContext context) {
-    if (widget.configuration?.cache ?? true) {
-      return CachedNetworkImage(imageUrl: widget.cldImage.toString());
-    } else {
-      return Image.network(widget.cldImage.toString());
-    }
+    return CachedNetworkImage(
+        imageUrl: cldImage.toString(),
+        httpHeaders: super.httpHeaders,
+        imageBuilder: super.imageBuilder,
+        placeholder: super.placeholder,
+        errorWidget: super.errorWidget,
+        width: super.width,
+        height: super.height,
+        color: super.color,
+        filterQuality: super.filterQuality,
+        colorBlendMode: super.colorBlendMode,
+        placeholderFadeInDuration: super.placeholderFadeInDuration,
+        memCacheWidth: super.memCacheWidth,
+        memCacheHeight: super.memCacheHeight,
+        cacheKey: super.cacheKey,
+        maxWidthDiskCache: super.maxWidthDiskCache,
+        maxHeightDiskCache: super.maxHeightDiskCache,
+        fit: super.fit,
+        repeat: super.repeat,
+        matchTextDirection: super.matchTextDirection);
   }
 }
