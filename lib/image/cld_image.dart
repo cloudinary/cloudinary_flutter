@@ -3,6 +3,7 @@ import 'package:cloudinary_dart/asset/cld_image.dart';
 import 'package:cloudinary_dart/transformation/transformation.dart';
 import 'package:cloudinary_flutter/image/no_disk_cache_manager.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
 import '../cloudinary_context.dart';
 import 'cld_image_widget_configuration.dart';
@@ -88,10 +89,10 @@ class CldImageWidget extends CachedNetworkImage {
 
   @override
   Widget build(BuildContext context) {
-    if (configuration != null && !configuration!.cache) {
+    var cacheManager = (configuration != null && !configuration!.cache) ? NoDiskCacheManager.instance : DefaultCacheManager();
       return CachedNetworkImage(
           imageUrl: cldImage.toString(),
-          cacheManager: NoDiskCacheManager.instance,
+          cacheManager: cacheManager,
           httpHeaders: super.httpHeaders,
           imageBuilder: super.imageBuilder,
           placeholder: super.placeholder,
@@ -110,27 +111,5 @@ class CldImageWidget extends CachedNetworkImage {
           fit: super.fit,
           repeat: super.repeat,
           matchTextDirection: super.matchTextDirection);
-    } else {
-      return CachedNetworkImage(
-          imageUrl: cldImage.toString(),
-          httpHeaders: super.httpHeaders,
-          imageBuilder: super.imageBuilder,
-          placeholder: super.placeholder,
-          errorWidget: super.errorWidget,
-          width: super.width,
-          height: super.height,
-          color: super.color,
-          filterQuality: super.filterQuality,
-          colorBlendMode: super.colorBlendMode,
-          placeholderFadeInDuration: super.placeholderFadeInDuration,
-          memCacheWidth: super.memCacheWidth,
-          memCacheHeight: super.memCacheHeight,
-          cacheKey: super.cacheKey,
-          maxWidthDiskCache: super.maxWidthDiskCache,
-          maxHeightDiskCache: super.maxHeightDiskCache,
-          fit: super.fit,
-          repeat: super.repeat,
-          matchTextDirection: super.matchTextDirection);
-    }
   }
 }
