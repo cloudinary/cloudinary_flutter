@@ -89,27 +89,29 @@ class CldImageWidget extends CachedNetworkImage {
 
   @override
   Widget build(BuildContext context) {
-    var cacheManager = (configuration != null && !configuration!.cache) ? NoDiskCacheManager.instance : DefaultCacheManager();
-      return CachedNetworkImage(
-          imageUrl: cldImage.toString(),
-          cacheManager: cacheManager,
-          httpHeaders: super.httpHeaders,
-          imageBuilder: super.imageBuilder,
-          placeholder: super.placeholder,
-          errorWidget: super.errorWidget,
-          width: super.width,
-          height: super.height,
-          color: super.color,
-          filterQuality: super.filterQuality,
-          colorBlendMode: super.colorBlendMode,
-          placeholderFadeInDuration: super.placeholderFadeInDuration,
-          memCacheWidth: super.memCacheWidth,
-          memCacheHeight: super.memCacheHeight,
-          cacheKey: super.cacheKey,
-          maxWidthDiskCache: super.maxWidthDiskCache,
-          maxHeightDiskCache: super.maxHeightDiskCache,
-          fit: super.fit,
-          repeat: super.repeat,
-          matchTextDirection: super.matchTextDirection);
+    var cacheManager = (configuration != null && !configuration!.cache)
+        ? NoDiskCacheManager.instance
+        : DefaultCacheManager();
+    return CachedNetworkImage(
+        imageUrl: cldImage.toString(),
+        cacheManager: cacheManager,
+        httpHeaders: super.httpHeaders,
+        imageBuilder: super.imageBuilder,
+        placeholder: super.placeholder,
+        errorWidget: super.errorWidget,
+        width: super.width,
+        height: super.height,
+        color: super.color,
+        filterQuality: super.filterQuality,
+        colorBlendMode: super.colorBlendMode,
+        placeholderFadeInDuration: super.placeholderFadeInDuration,
+        memCacheWidth: super.memCacheWidth,
+        memCacheHeight: super.memCacheHeight,
+        cacheKey: super.cacheKey,
+        maxWidthDiskCache: super.maxWidthDiskCache,
+        maxHeightDiskCache: super.maxHeightDiskCache,
+        fit: super.fit,
+        repeat: super.repeat,
+        matchTextDirection: super.matchTextDirection);
   }
 }
