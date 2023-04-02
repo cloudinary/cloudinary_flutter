@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloudinary_dart/asset/cld_image.dart';
-import 'package:cloudinary_dart/transformation/transformation.dart';
+import 'package:cloudinary_url_gen/asset/cld_image.dart';
+import 'package:cloudinary_url_gen/transformation/transformation.dart';
 import 'package:cloudinary_flutter/image/no_disk_cache_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
