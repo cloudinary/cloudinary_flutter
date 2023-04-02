@@ -1,4 +1,9 @@
-0.0.5 / 2023-03-212
+0.9.0 / 2023-04-02
+==================
+
+- Add cloudinary_url_gen dependency
+
+0.0.5 / 2023-03-22
 ==================
 
 - Add cache to CLDImageWidget
