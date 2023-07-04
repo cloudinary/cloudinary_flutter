@@ -45,7 +45,8 @@ class CldImageWidget extends CachedNetworkImage {
       BoxFit? fit,
       ImageRepeat repeat = ImageRepeat.noRepeat,
       FilterQuality filterQuality = FilterQuality.low,
-      bool matchTextDirection = false})
+      bool matchTextDirection = false,
+      Alignment alignment = Alignment.center})
       : super(
             imageUrl: '',
             httpHeaders: httpHeaders,
@@ -112,6 +113,7 @@ class CldImageWidget extends CachedNetworkImage {
         maxHeightDiskCache: super.maxHeightDiskCache,
         fit: super.fit,
         repeat: super.repeat,
-        matchTextDirection: super.matchTextDirection);
+        matchTextDirection: super.matchTextDirection,
+        alignment: super.alignment);
   }
 }
