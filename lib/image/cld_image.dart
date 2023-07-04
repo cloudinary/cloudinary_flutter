@@ -90,9 +90,10 @@ class CldImageWidget extends CachedNetworkImage {
 
   @override
   Widget build(BuildContext context) {
-    var cacheManager = (configuration != null && !configuration!.cache)
-        ? NoDiskCacheManager.instance
-        : DefaultCacheManager();
+    final CacheManager cacheManager =
+        (configuration != null && !configuration!.cache)
+            ? NoDiskCacheManager.instance
+            : DefaultCacheManager();
     return CachedNetworkImage(
       imageUrl: cldImage.toString(),
       cacheManager: cacheManager,
