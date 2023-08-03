@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the CldImageWidget class from the cld_image library, for the Dart programming language.">
+  <title>CldImageWidget class - cld_image library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  <style>
+    site-nav.navbar-default .navbar-brand {
+    color: #3448C5;
+    }
+
+.navbar-brand {
+    background-image: url("https://cloudinary-res.cloudinary.com/image/upload/docsite/brand-assets/cloudinary_cloud_glyph_4ref.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 60px;
+    margin-top: 100px;
+}
+</style>
+<div class="navbar-header" style="padding:10px">
+    <a class="navbar-brand" href="index.html">Cloudinary Dart SDK v0.9.0</a>
+</div>
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">cloudinary_flutter</a></li>
+    <li><a href="../image_cld_image/image_cld_image-library.html">cld_image</a></li>
+    <li class="self-crumb">CldImageWidget class</li>
+  </ol>
+  <div class="self-name">CldImageWidget</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">CldImageWidget</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A widget that displays an image.
+A constructor with multiple attributes provided for the various ways that an image can be
+The widget is meant to display an image from the Cloudinary's cloud
+The <code>publicId</code> field should not be null and must be provided.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></li>
+        <li><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a></li>
+        <li><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage-class.html">CachedNetworkImage</a></li>
+      <li>CldImageWidget</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="CldImageWidget" class="callable">
+          <span class="name"><a href="../image_cld_image/CldImageWidget/CldImageWidget.html">CldImageWidget</a></span><span class="signature">(<span class="parameter" id="-param-publicId">{<span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">publicId</span>, </span><span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-configuration"><span class="type-annotation"><a href="../image_cld_image_widget_configuration/CldImageWidgetConfiguration-class.html">CldImageWidgetConfiguration</a>?</span> <span class="parameter-name">configuration</span>, </span><span class="parameter" id="-param-version"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">version</span>, </span><span class="parameter" id="-param-extension"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">extension</span>, </span><span class="parameter" id="-param-urlSuffix"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">urlSuffix</span>, </span><span class="parameter" id="-param-assetType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">assetType</span>, </span><span class="parameter" id="-param-deliveryType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deliveryType</span>, </span><span class="parameter" id="-param-transformation"><span class="type-annotation"><a href="https://pub.dev/documentation/cloudinary_url_gen/1.0.0/transformation_transformation/Transformation-class.html">Transformation</a>?</span> <span class="parameter-name">transformation</span>, </span><span class="parameter" id="-param-httpHeaders"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">httpHeaders</span>, </span><span class="parameter" id="-param-imageBuilder"><span class="type-annotation"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/ImageWidgetBuilder.html">ImageWidgetBuilder</a>?</span> <span class="parameter-name">imageBuilder</span>, </span><span class="parameter" id="-param-placeholder"><span class="type-annotation"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/PlaceholderWidgetBuilder.html">PlaceholderWidgetBuilder</a>?</span> <span class="parameter-name">placeholder</span>, </span><span class="parameter" id="-param-errorBuilder"><span class="type-annotation"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/LoadingErrorWidgetBuilder.html">LoadingErrorWidgetBuilder</a>?</span> <span class="parameter-name">errorBuilder</span>, </span><span class="parameter" id="-param-placeholderFadeInDuration"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Duration-class.html">Duration</a>?</span> <span class="parameter-name">placeholderFadeInDuration</span>, </span><span class="parameter" id="-param-memCacheWidth"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">memCacheWidth</span>, </span><span class="parameter" id="-param-memCacheHeight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">memCacheHeight</span>, </span><span class="parameter" id="-param-cacheKey"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cacheKey</span>, </span><span class="parameter" id="-param-maxWidthDiskCache"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maxWidthDiskCache</span>, </span><span class="parameter" id="-param-maxHeightDiskCache"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maxHeightDiskCache</span>, </span><span class="parameter" id="-param-width"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="-param-height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-colorBlendMode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">colorBlendMode</span>, </span><span class="parameter" id="-param-fit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/BoxFit.html">BoxFit</a>?</span> <span class="parameter-name">fit</span>, </span><span class="parameter" id="-param-repeat"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/ImageRepeat.html">ImageRepeat</a></span> <span class="parameter-name">repeat</span> = <span class="default-value">ImageRepeat.noRepeat</span>, </span><span class="parameter" id="-param-filterQuality"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/FilterQuality.html">FilterQuality</a></span> <span class="parameter-name">filterQuality</span> = <span class="default-value">FilterQuality.low</span>, </span><span class="parameter" id="-param-matchTextDirection"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">matchTextDirection</span> = <span class="default-value">false</span>}</span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="alignment" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/alignment.html">alignment</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/painting/Alignment-class.html">Alignment</a></span> 
+
+</dt>
+<dd class="inherited">
+  How to align the image within its bounds.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="cacheKey" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/cacheKey.html">cacheKey</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The target image's cache key.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="cacheManager" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/cacheManager.html">cacheManager</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/flutter_cache_manager/3.3.0/flutter_cache_manager/BaseCacheManager-class.html">BaseCacheManager</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Option to use cachemanager with other settings
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="cldImage" class="property">
+  <span class="name"><a href="../image_cld_image/CldImageWidget/cldImage.html">cldImage</a></span>
+  <span class="signature">&#8596; <a href="https://pub.dev/documentation/cloudinary_url_gen/1.0.0/asset_cld_image/CldImage-class.html">CldImage</a></span> 
+
+</dt>
+<dd>
+  Cloudinary image object
+This object holds all of Cloudinary's attributes.
+  <div class="features"><span class="feature">late</span><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="color" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/color.html">color</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  If non-null, this color is blended with each image pixel using <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/colorBlendMode.html">colorBlendMode</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="colorBlendMode" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/colorBlendMode.html">colorBlendMode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/BlendMode.html">BlendMode</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Used to combine <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/color.html">color</a> with this image.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="configuration" class="property">
+  <span class="name"><a href="../image_cld_image/CldImageWidget/configuration.html">configuration</a></span>
+  <span class="signature">&#8594; <a href="../image_cld_image_widget_configuration/CldImageWidgetConfiguration-class.html">CldImageWidgetConfiguration</a>?</span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="errorWidget" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/errorWidget.html">errorWidget</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/LoadingErrorWidgetBuilder.html">LoadingErrorWidgetBuilder</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Widget displayed while the target <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageUrl.html">imageUrl</a> failed loading.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="fadeInCurve" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fadeInCurve.html">fadeInCurve</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/animation/Curve-class.html">Curve</a></span> 
+
+</dt>
+<dd class="inherited">
+  The curve of the fade-in animation for the <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageUrl.html">imageUrl</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="fadeInDuration" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fadeInDuration.html">fadeInDuration</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Duration-class.html">Duration</a></span> 
+
+</dt>
+<dd class="inherited">
+  The duration of the fade-in animation for the <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageUrl.html">imageUrl</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="fadeOutCurve" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fadeOutCurve.html">fadeOutCurve</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/animation/Curve-class.html">Curve</a></span> 
+
+</dt>
+<dd class="inherited">
+  The curve of the fade-out animation for the <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/placeholder.html">placeholder</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="fadeOutDuration" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fadeOutDuration.html">fadeOutDuration</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Duration-class.html">Duration</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The duration of the fade-out animation for the <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/placeholder.html">placeholder</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="filterQuality" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/filterQuality.html">filterQuality</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/FilterQuality.html">FilterQuality</a></span> 
+
+</dt>
+<dd class="inherited">
+  Target the interpolation quality for image scaling.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="fit" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fit.html">fit</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/painting/BoxFit.html">BoxFit</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  How to inscribe the image into the space allocated during layout.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="height" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/height.html">height</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  If non-null, require the image to have this height.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="httpHeaders" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/httpHeaders.html">httpHeaders</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd class="inherited">
+  Optional headers for the http request of the image url
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="imageBuilder" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageBuilder.html">imageBuilder</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/ImageWidgetBuilder.html">ImageWidgetBuilder</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Optional builder to further customize the display of the image.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="imageUrl" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageUrl.html">imageUrl</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd class="inherited">
+  The target image that is displayed.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="matchTextDirection" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/matchTextDirection.html">matchTextDirection</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether to paint the image in the direction of the <a href="https://api.flutter.dev/flutter/dart-ui/TextDirection.html">TextDirection</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="maxHeightDiskCache" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/maxHeightDiskCache.html">maxHeightDiskCache</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Will resize the image and store the resized image in the disk cache.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="maxWidthDiskCache" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/maxWidthDiskCache.html">maxWidthDiskCache</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Will resize the image and store the resized image in the disk cache.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="memCacheHeight" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/memCacheHeight.html">memCacheHeight</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Will resize the image in memory to have a certain height using <a href="https://api.flutter.dev/flutter/painting/ResizeImage-class.html">ResizeImage</a>
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="memCacheWidth" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/memCacheWidth.html">memCacheWidth</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Will resize the image in memory to have a certain width using <a href="https://api.flutter.dev/flutter/painting/ResizeImage-class.html">ResizeImage</a>
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="placeholder" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/placeholder.html">placeholder</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/PlaceholderWidgetBuilder.html">PlaceholderWidgetBuilder</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Widget displayed while the target <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageUrl.html">imageUrl</a> is loading.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="placeholderFadeInDuration" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/placeholderFadeInDuration.html">placeholderFadeInDuration</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Duration-class.html">Duration</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The duration of the fade-in animation for the <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/placeholder.html">placeholder</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="progressIndicatorBuilder" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/progressIndicatorBuilder.html">progressIndicatorBuilder</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/ProgressIndicatorBuilder.html">ProgressIndicatorBuilder</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Widget displayed while the target <a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageUrl.html">imageUrl</a> is loading.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="repeat" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/repeat.html">repeat</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/painting/ImageRepeat.html">ImageRepeat</a></span> 
+
+</dt>
+<dd class="inherited">
+  How to paint any portions of the layout bounds not covered by the image.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="useOldImageOnUrlChange" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/useOldImageOnUrlChange.html">useOldImageOnUrlChange</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  When set to true it will animate from the old image to the new image
+if the url changes.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="width" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/width.html">width</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  If non-null, require the image to have this width.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="build" class="callable">
+  <span class="name"><a href="../image_cld_image/CldImageWidget/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Describes the part of the user interface represented by this widget.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/widgets/StatelessElement-class.html">StatelessElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="https://api.flutter.dev/flutter/widgets/StatelessElement-class.html">StatelessElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="https://api.flutter.dev/flutter/foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">cloudinary_flutter</a></li>
+  <li><a href="../image_cld_image/image_cld_image-library.html">cld_image</a></li>
+  <li class="self-crumb">CldImageWidget class</li>
+</ol>
+
+
+    <h5>cld_image library</h5>
+    <ol>
+      <li class="section-title"><a href="../image_cld_image/image_cld_image-library.html#classes">Classes</a></li>
+        <li><a href="../image_cld_image/CldImageWidget-class.html">CldImageWidget</a></li>
+
+
+
+
+
+
+
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="../image_cld_image/CldImageWidget-class.html#constructors">Constructors</a></li>
+          <li><a href="../image_cld_image/CldImageWidget/CldImageWidget.html">CldImageWidget</a></li>
+
+
+        <li class="section-title">
+          <a href="../image_cld_image/CldImageWidget-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/alignment.html">alignment</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/cacheKey.html">cacheKey</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/cacheManager.html">cacheManager</a></li>
+          <li><a href="../image_cld_image/CldImageWidget/cldImage.html">cldImage</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/color.html">color</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/colorBlendMode.html">colorBlendMode</a></li>
+          <li><a href="../image_cld_image/CldImageWidget/configuration.html">configuration</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/errorWidget.html">errorWidget</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fadeInCurve.html">fadeInCurve</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fadeInDuration.html">fadeInDuration</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fadeOutCurve.html">fadeOutCurve</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fadeOutDuration.html">fadeOutDuration</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/filterQuality.html">filterQuality</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/fit.html">fit</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/height.html">height</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/httpHeaders.html">httpHeaders</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageBuilder.html">imageBuilder</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/imageUrl.html">imageUrl</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/key.html">key</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/matchTextDirection.html">matchTextDirection</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/maxHeightDiskCache.html">maxHeightDiskCache</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/maxWidthDiskCache.html">maxWidthDiskCache</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/memCacheHeight.html">memCacheHeight</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/memCacheWidth.html">memCacheWidth</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/placeholder.html">placeholder</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/placeholderFadeInDuration.html">placeholderFadeInDuration</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/progressIndicatorBuilder.html">progressIndicatorBuilder</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/repeat.html">repeat</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/useOldImageOnUrlChange.html">useOldImageOnUrlChange</a></li>
+          <li class="inherited"><a href="https://pub.dev/documentation/cached_network_image/3.2.3/cached_network_image/CachedNetworkImage/width.html">width</a></li>
+
+        <li class="section-title"><a href="../image_cld_image/CldImageWidget-class.html#instance-methods">Methods</a></li>
+          <li><a href="../image_cld_image/CldImageWidget/build.html">build</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget/createElement.html">createElement</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title inherited"><a href="../image_cld_image/CldImageWidget-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/widgets/Widget/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    cloudinary_flutter
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+<div id="footer" style="padding:10px">
+    © <script>document.write(new Date().getFullYear())</script> Cloudinary. All rights reserved.<br>
+</div>
+
+</body>
+
+</html>
+
