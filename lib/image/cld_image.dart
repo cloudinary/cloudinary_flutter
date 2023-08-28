@@ -15,35 +15,36 @@ class CldImageWidget extends CachedNetworkImage {
   late final CldImage cldImage;
   final CldImageWidgetConfiguration? configuration;
 
-  CldImageWidget(
-      {required String publicId,
-      super.key,
-      this.configuration,
-      String? version,
-      String? extension,
-      String? urlSuffix,
-      String? assetType,
-      String? deliveryType,
-      Transformation? transformation,
-      Map<String, String>? httpHeaders,
-      ImageWidgetBuilder? imageBuilder,
-      PlaceholderWidgetBuilder? placeholder,
-      LoadingErrorWidgetBuilder? errorBuilder,
-      Duration? placeholderFadeInDuration,
-      int? memCacheWidth,
-      int? memCacheHeight,
-      String? cacheKey,
-      int? maxWidthDiskCache,
-      int? maxHeightDiskCache,
-      double? width,
-      double? height,
-      Color? color,
-      BlendMode? colorBlendMode,
-      BoxFit? fit,
-      ImageRepeat repeat = ImageRepeat.noRepeat,
-      FilterQuality filterQuality = FilterQuality.low,
-      bool matchTextDirection = false})
-      : super(
+  CldImageWidget({
+    required String publicId,
+    super.key,
+    this.configuration,
+    String? version,
+    String? extension,
+    String? urlSuffix,
+    String? assetType,
+    String? deliveryType,
+    Transformation? transformation,
+    Map<String, String>? httpHeaders,
+    ImageWidgetBuilder? imageBuilder,
+    PlaceholderWidgetBuilder? placeholder,
+    LoadingErrorWidgetBuilder? errorBuilder,
+    Duration? placeholderFadeInDuration,
+    int? memCacheWidth,
+    int? memCacheHeight,
+    String? cacheKey,
+    int? maxWidthDiskCache,
+    int? maxHeightDiskCache,
+    double? width,
+    double? height,
+    Color? color,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    FilterQuality filterQuality = FilterQuality.low,
+    bool matchTextDirection = false,
+    Alignment alignment = Alignment.center,
+  }) : super(
             imageUrl: '',
             httpHeaders: httpHeaders,
             imageBuilder: imageBuilder,
@@ -86,29 +87,32 @@ class CldImageWidget extends CachedNetworkImage {
 
   @override
   Widget build(BuildContext context) {
-    var cacheManager = (configuration != null && !configuration!.cache)
-        ? NoDiskCacheManager.instance
-        : DefaultCacheManager();
+    final CacheManager cacheManager =
+        (configuration != null && !configuration!.cache)
+            ? NoDiskCacheManager.instance
+            : DefaultCacheManager();
     return CachedNetworkImage(
-        imageUrl: cldImage.toString(),
-        cacheManager: cacheManager,
-        httpHeaders: super.httpHeaders,
-        imageBuilder: super.imageBuilder,
-        placeholder: super.placeholder,
-        errorWidget: super.errorWidget,
-        width: super.width,
-        height: super.height,
-        color: super.color,
-        filterQuality: super.filterQuality,
-        colorBlendMode: super.colorBlendMode,
-        placeholderFadeInDuration: super.placeholderFadeInDuration,
-        memCacheWidth: super.memCacheWidth,
-        memCacheHeight: super.memCacheHeight,
-        cacheKey: super.cacheKey,
-        maxWidthDiskCache: super.maxWidthDiskCache,
-        maxHeightDiskCache: super.maxHeightDiskCache,
-        fit: super.fit,
-        repeat: super.repeat,
-        matchTextDirection: super.matchTextDirection);
+      imageUrl: cldImage.toString(),
+      cacheManager: cacheManager,
+      httpHeaders: super.httpHeaders,
+      imageBuilder: super.imageBuilder,
+      placeholder: super.placeholder,
+      errorWidget: super.errorWidget,
+      width: super.width,
+      height: super.height,
+      color: super.color,
+      filterQuality: super.filterQuality,
+      colorBlendMode: super.colorBlendMode,
+      placeholderFadeInDuration: super.placeholderFadeInDuration,
+      memCacheWidth: super.memCacheWidth,
+      memCacheHeight: super.memCacheHeight,
+      cacheKey: super.cacheKey,
+      maxWidthDiskCache: super.maxWidthDiskCache,
+      maxHeightDiskCache: super.maxHeightDiskCache,
+      fit: super.fit,
+      repeat: super.repeat,
+      matchTextDirection: super.matchTextDirection,
+      alignment: super.alignment,
+    );
   }
 }
