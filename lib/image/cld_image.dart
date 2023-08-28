@@ -8,13 +8,10 @@ import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import '../cloudinary_context.dart';
 import 'cld_image_widget_configuration.dart';
 
-/// A widget that displays an image.
-/// A constructor with multiple attributes provided for the various ways that an image can be
-/// The widget is meant to display an image from the Cloudinary's cloud
-/// The [publicId] field should not be null and must be provided.
+/// A widget that displays a Cloudinary-hosted image. Its constructor offers various attributes to customize image presentation.
+/// Ensure the [publicId] field is not null. It’s a required identifier for the image you want to display.
 class CldImageWidget extends CachedNetworkImage {
   /// Cloudinary image object
-  /// This object holds all of Cloudinary's attributes.
   late final CldImage cldImage;
   final CldImageWidgetConfiguration? configuration;
 
