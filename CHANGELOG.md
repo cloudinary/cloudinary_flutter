@@ -1,3 +1,9 @@
+1.1.0 / 2023-10-22
+==================
+
+- Add video player controller
+- Add analytics token support
+
 1.0.0 / 2023-06-29
 ==================
 
