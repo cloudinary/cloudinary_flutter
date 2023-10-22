@@ -42,7 +42,7 @@ The `Cloudinary` class is the main entry point for using the library. Your `clou
 Here’s an example of setting configuration parameters in your Flutter application:
 
 ```dart
-CloudinaryContext.cloudinary = Cloudinary.fromCloudName(cloudName: 'demo');
+Cloudinary cloudinary = CloudinaryObject.fromCloudName(cloudName: 'demo');
 ```
 
 ### Transform and Optimize Assets
