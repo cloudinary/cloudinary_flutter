@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloudinary_url_gen/asset/cld_image.dart';
+import 'package:cloudinary_url_gen/cloudinary.dart';
 import 'package:cloudinary_url_gen/transformation/transformation.dart';
 import 'package:cloudinary_flutter/image/no_disk_cache_manager.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,6 +20,7 @@ class CldImageWidget extends CachedNetworkImage {
       {required String publicId,
       super.key,
       this.configuration,
+      Cloudinary? cloudinary,
       String? version,
       String? extension,
       String? urlSuffix,
@@ -63,7 +65,8 @@ class CldImageWidget extends CachedNetworkImage {
             fit: fit,
             repeat: repeat,
             matchTextDirection: matchTextDirection) {
-    cldImage = CloudinaryContext.cloudinary.image(publicId);
+    cloudinary ??= CloudinaryContext.cloudinary;
+    cldImage = cloudinary.image(publicId);
     if (version != null) {
       cldImage.version(version);
     }
