@@ -1,4 +1,5 @@
 import 'package:cloudinary_url_gen/asset/cld_video.dart';
+import 'package:cloudinary_url_gen/cloudinary.dart';
 import 'package:cloudinary_url_gen/transformation/transformation.dart';
 import 'package:cloudinary_url_gen/transformation/video_edit/transcode/transcode.dart';
 import 'package:cloudinary_url_gen/transformation/video_edit/transcode/transcode_actions.dart';
@@ -14,6 +15,7 @@ class CldVideoController extends VideoPlayerController {
 
   CldVideoController({
     required String publicId,
+    Cloudinary? cloudinary,
     String? version,
     String? extension,
     String? urlSuffix,
@@ -23,6 +25,7 @@ class CldVideoController extends VideoPlayerController {
     bool? automaticStreamingProfile,
   }) : super.networkUrl(_buildVideoUri(
             publicId,
+            cloudinary,
             version,
             extension,
             urlSuffix,
@@ -33,6 +36,7 @@ class CldVideoController extends VideoPlayerController {
 
   static Uri _buildVideoUri(
     String publicId,
+    Cloudinary? cloudinary,
     String? version,
     String? extension,
     String? urlSuffix,
@@ -41,7 +45,8 @@ class CldVideoController extends VideoPlayerController {
     Transformation? transformation,
     bool? automaticStreamingProfile,
   ) {
-    CldVideo video = CloudinaryContext.cloudinary.video(publicId);
+    cloudinary ??= CloudinaryContext.cloudinary;
+    CldVideo video = cloudinary.video(publicId);
     ((version != null) ? video.version(version) : null);
     ((extension != null) ? video.extension(extension) : null);
     ((urlSuffix != null) ? video.urlSuffix(urlSuffix) : null);
