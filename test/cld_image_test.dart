@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloudinary_url_gen/analytics.dart';
 import 'package:cloudinary_url_gen/transformation/resize/resize.dart';
 import 'package:cloudinary_url_gen/transformation/transformation.dart';
 import 'package:cloudinary_flutter/cloudinary_object.dart';
@@ -76,13 +77,14 @@ void main() {
 
   testWidgets('Test CldImageWidget has valid url with analytics',
       (widgetTester) async {
+    cloudinary.analytics = Analytics.fromParameters("O", "1.0.0", "39.1", "");
     cloudinary.config.urlConfig.analytics = true;
     var widget = CldImageWidget(
         cloudinary: cloudinary, publicId: 'dog', width: 500, height: 100);
     await widgetTester.pumpWidget(widget);
 
     final imageFinder = find.image(CachedNetworkImageProvider(
-        'https://res.cloudinary.com/demo/image/upload/dog?_a=CAOAABBnZAA0'));
+        'https://res.cloudinary.com/demo/image/upload/dog?_a=CAOAABCLZAA0'));
     expect(imageFinder, findsOneWidget);
   });
 }
