@@ -15,11 +15,4 @@ class CloudinaryObject extends Cloudinary {
     Analytics.fromParameters(sdk: 'O', version: sdkVersion);
     super.setAnalytics(analytics);
   }
-
-  String _getOsVersion() {
-    if (Platform.isAndroid || Platform.isIOS) {
-      return Platform.operatingSystemVersion;
-    }
-    return 'AA';
-  }
 }
