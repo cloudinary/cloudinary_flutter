@@ -1,8 +1,5 @@
-import 'dart:io';
 import 'package:cloudinary_url_gen/analytics/analytics.dart';
 import 'package:cloudinary_url_gen/cloudinary.dart';
-
-import 'package:flutter/foundation.dart' show kIsWeb;
 
 final sdkVersion = '1.1.0';
 
