@@ -1,3 +1,9 @@
+1.2.0 / 2023-11-12
+==================
+
+- Add user-agent support
+- Fix analytics token for web apps
+
 1.1.0 / 2023-10-22
 ==================
 
