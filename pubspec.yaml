@@ -14,6 +14,7 @@ dependencies:
   cached_network_image: ^3.2.3
   flutter_cache_manager: ^3.3.0
   video_player: ^2.7.2
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
