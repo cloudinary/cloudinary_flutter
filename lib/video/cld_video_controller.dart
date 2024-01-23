@@ -22,7 +22,7 @@ class CldVideoController extends VideoPlayerController
   Future<void> initialize() async {
     await super.initialize();
 
-    uri = Uri.parse(dataSource!);
+    uri = Uri.parse(dataSource);
     eventsManager = VideoEventsManager();
 
     addCustomListeners();
@@ -101,7 +101,7 @@ class CldVideoController extends VideoPlayerController
     switch (analyticsType) {
       case AnalyticsType.auto:
         eventsManager.trackingType = TrackingType.auto;
-        eventsManager.cloudName = cloudName ?? eventsManager.publicId;
+        eventsManager.cloudName = cloudName ?? eventsManager.cloudName;
         eventsManager.publicId = publicId ?? this.publicId;
         break;
       case AnalyticsType.manual:

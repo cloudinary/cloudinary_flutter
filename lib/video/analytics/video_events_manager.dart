@@ -7,8 +7,6 @@ import 'dart:async';
 class VideoEventsManager {
   final String CLD_ANALYTICS_ENDPOINT_PRODUCTION_URL =
       "https://video-analytics-api.cloudinary.com/v1/video-analytics";
-  String CLD_ANALYTICS_ENDPOINT_DEVELOPMENT_URL =
-      "http://localhost:3001/events";
 
   String viewId;
   late String userId;
