@@ -1,7 +1,7 @@
 import 'package:cloudinary_url_gen/analytics/analytics.dart';
 import 'package:cloudinary_url_gen/cloudinary.dart';
 
-final sdkVersion = '1.2.0';
+final sdkVersion = '1.3.0';
 
 /// Helper class to help users define the Cloudinary object to be used with their widgets
 class CloudinaryObject extends Cloudinary {
