@@ -93,6 +93,7 @@ void main() {
       final CldVideoController controller = CldVideoController(
         publicId: publicId,
         cloudinary: cloudinary,
+        automaticStreamingProfile: true
       );
 
       final String expectedUriString =
