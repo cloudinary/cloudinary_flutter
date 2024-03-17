@@ -96,6 +96,24 @@ void main() {
       );
 
       final String expectedUriString =
+          'https://res.cloudinary.com/test/video/upload/'
+          'sample_public_id';
+      expect(controller.dataSource.toString(), expectedUriString);
+    });
+
+    test(
+        'CldVideoController constructor builds correct URI with specific cloudinary and automatic streaming profile',
+        () {
+      Cloudinary cloudinary = CloudinaryObject.fromCloudName(cloudName: "test");
+      cloudinary.config.urlConfig.analytics = false;
+      final String publicId = 'sample_public_id';
+
+      final CldVideoController controller = CldVideoController(
+          publicId: publicId,
+          cloudinary: cloudinary,
+          automaticStreamingProfile: true);
+
+      final String expectedUriString =
           'https://res.cloudinary.com/test/video/upload/sp_auto/'
           'sample_public_id.m3u8';
       expect(controller.dataSource.toString(), expectedUriString);

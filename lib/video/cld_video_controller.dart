@@ -85,7 +85,7 @@ class CldVideoController extends VideoPlayerController
     ((assetType != null) ? video.assetType(assetType) : null);
     ((deliveryType != null) ? video.deliveryType(deliveryType) : null);
 
-    if ((automaticStreamingProfile == null || automaticStreamingProfile) &&
+    if ((automaticStreamingProfile != null && automaticStreamingProfile) &&
         transformation == null) {
       video.transformation(Transformation()
           .transcode(Transcode.streamingProfile(StreamingProfile.auto())));
