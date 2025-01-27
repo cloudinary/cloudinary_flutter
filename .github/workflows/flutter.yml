@@ -3,7 +3,7 @@ name: Flutter CI
 on:
   push:
     branches:
-      - main # Runs on pushes to the main branch
+      - master # Runs on pushes to the main branch
   pull_request:
     branches:
       - '**' # Runs on all pull requests
