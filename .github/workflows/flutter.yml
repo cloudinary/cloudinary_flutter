@@ -22,7 +22,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable # Use stable version of Flutter
+          flutter-version: 3.13.0
 
       # Step 3: Precache Dependencies
       - name: Flutter Precache
