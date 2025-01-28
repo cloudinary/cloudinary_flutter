@@ -1,0 +1,47 @@
+name: Flutter CI
+
+on:
+  push:
+    branches:
+      - master # Runs on pushes to the main branch
+  pull_request:
+    branches:
+      - '**' # Runs on all pull requests
+
+jobs:
+  flutter-test:
+    name: Run Flutter Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Flutter
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.13.0
+
+      # Step 3: Precache Dependencies
+      - name: Flutter Precache
+        run: flutter precache
+
+      # Step 4: Run Flutter Doctor (Optional, for Debugging)
+      - name: Flutter Doctor
+        run: flutter doctor
+
+      # Step 5: Run Tests
+      - name: Run Tests
+        run: flutter test
+
+      # Cache dependencies
+      - name: Cache Pub Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.pub-cache
+          key: ${{ runner.os }}-pub-cache-${{ hashFiles('**/pubspec.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-cache-
+
