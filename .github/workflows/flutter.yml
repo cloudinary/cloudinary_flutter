@@ -3,10 +3,10 @@ name: Flutter CI
 on:
   push:
     branches:
-      - master # Runs on pushes to the main branch
+      - master
   pull_request:
     branches:
-      - '**' # Runs on all pull requests
+      - '**'
 
 jobs:
   flutter-test:
@@ -18,25 +18,32 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Flutter
+      # Step 2: Set up Dart (explicitly specify Dart version)
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          channel: stable
+          version: 3.2.0 # Explicitly set Dart version
+
+      # Step 3: Set up Flutter (use a specific version)
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'stable'
+          flutter-version: '3.13.0' # Use a specific version of Flutter
 
-      # Step 3: Precache Dependencies
+      # Step 4: Precache Dependencies
       - name: Flutter Precache
         run: flutter precache
 
-      # Step 4: Run Flutter Doctor (Optional, for Debugging)
+      # Step 5: Run Flutter Doctor (Optional, for Debugging)
       - name: Flutter Doctor
         run: flutter doctor
 
-      # Step 5: Run Tests
+      # Step 6: Run Tests
       - name: Run Tests
         run: flutter test
 
-      # Cache dependencies
+      # Step 7: Cache dependencies
       - name: Cache Pub Dependencies
         uses: actions/cache@v3
         with:
@@ -44,4 +51,3 @@ jobs:
           key: ${{ runner.os }}-pub-cache-${{ hashFiles('**/pubspec.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pub-cache-
-
