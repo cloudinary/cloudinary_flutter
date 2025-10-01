@@ -44,6 +44,24 @@ Here’s an example of setting configuration parameters in your Flutter applicat
 ```dart
 Cloudinary cloudinary = CloudinaryObject.fromCloudName(cloudName: 'demo');
 ```
+### Pre-caching Images
+Flutter allows you to pre-load Cloudinary images into memory so they display instantly when needed. This improves performance and provides a smoother user experience.
+
+Example:
+
+```dart
+// Precache a Cloudinary image in Flutter
+void precacheCloudinaryImage(BuildContext context) {
+  final image = CldImageWidget(
+    publidId: 'sample',
+    transformation: Transformation()
+      ..resize(Resize.scale()..width(500)),
+  );
+
+  // Preload the image into cache
+  precacheImage(image.imageProvider, context);
+}
+
 
 ### Transform and Optimize Assets
 
