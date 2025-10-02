@@ -26,16 +26,11 @@ This app demonstrates real-world usage of the Cloudinary SDK for Flutter:
 
 ## Screenshots
 
-Place screenshots under `assets/screenshots/` in the project root. Example files:
-
-
-Preview:
-
 | ![Home screen](screenshots/home.jpg) | ![Add memory](screenshots/add.jpg) | ![Photo viewer](screenshots/view.jpg) |
 |:---:|:---:|:---:|
 | Home screen | Add memory | Photo viewer |
 
-Recommended: 1080×1920 PNG or JPEG, optimized for mobile.
+
 
 ## Environment Setup
 
