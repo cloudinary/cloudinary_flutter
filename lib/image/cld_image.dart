@@ -6,7 +6,7 @@ import 'package:cloudinary_flutter/image/no_disk_cache_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
-import '../cloudinary_context.dart';
+import '../cloudinary_object.dart';
 import 'cld_image_widget_configuration.dart';
 
 /// A widget that displays a Cloudinary-hosted image. Its constructor offers various attributes to customize image presentation.
@@ -16,56 +16,57 @@ class CldImageWidget extends CachedNetworkImage {
   late final CldImage cldImage;
   final CldImageWidgetConfiguration? configuration;
 
-  CldImageWidget(
-      {required String publicId,
-      super.key,
-      this.configuration,
-      Cloudinary? cloudinary,
-      String? version,
-      String? extension,
-      String? urlSuffix,
-      String? assetType,
-      String? deliveryType,
-      Transformation? transformation,
-      Map<String, String>? httpHeaders,
-      ImageWidgetBuilder? imageBuilder,
-      PlaceholderWidgetBuilder? placeholder,
-      LoadingErrorWidgetBuilder? errorBuilder,
-      Duration? placeholderFadeInDuration,
-      int? memCacheWidth,
-      int? memCacheHeight,
-      String? cacheKey,
-      int? maxWidthDiskCache,
-      int? maxHeightDiskCache,
-      double? width,
-      double? height,
-      Color? color,
-      BlendMode? colorBlendMode,
-      BoxFit? fit,
-      ImageRepeat repeat = ImageRepeat.noRepeat,
-      FilterQuality filterQuality = FilterQuality.low,
-      bool matchTextDirection = false})
-      : super(
-            imageUrl: '',
-            httpHeaders: httpHeaders,
-            imageBuilder: imageBuilder,
-            placeholder: placeholder,
-            errorWidget: errorBuilder,
-            width: width,
-            height: height,
-            color: color,
-            filterQuality: filterQuality,
-            colorBlendMode: colorBlendMode,
-            placeholderFadeInDuration: placeholderFadeInDuration,
-            memCacheWidth: memCacheWidth,
-            memCacheHeight: memCacheHeight,
-            cacheKey: cacheKey,
-            maxWidthDiskCache: maxWidthDiskCache,
-            maxHeightDiskCache: maxHeightDiskCache,
-            fit: fit,
-            repeat: repeat,
-            matchTextDirection: matchTextDirection) {
-    cloudinary ??= CloudinaryContext.cloudinary;
+  CldImageWidget({
+    required String publicId,
+    super.key,
+    this.configuration,
+    Cloudinary? cloudinary,
+    String? version,
+    String? extension,
+    String? urlSuffix,
+    String? assetType,
+    String? deliveryType,
+    Transformation? transformation,
+    Map<String, String>? httpHeaders,
+    ImageWidgetBuilder? imageBuilder,
+    PlaceholderWidgetBuilder? placeholder,
+    LoadingErrorWidgetBuilder? errorBuilder,
+    Duration? placeholderFadeInDuration,
+    int? memCacheWidth,
+    int? memCacheHeight,
+    String? cacheKey,
+    int? maxWidthDiskCache,
+    int? maxHeightDiskCache,
+    double? width,
+    double? height,
+    Color? color,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    FilterQuality filterQuality = FilterQuality.low,
+    bool matchTextDirection = false,
+  }) : super(
+         imageUrl: '',
+         httpHeaders: httpHeaders,
+         imageBuilder: imageBuilder,
+         placeholder: placeholder,
+         errorWidget: errorBuilder,
+         width: width,
+         height: height,
+         color: color,
+         filterQuality: filterQuality,
+         colorBlendMode: colorBlendMode,
+         placeholderFadeInDuration: placeholderFadeInDuration,
+         memCacheWidth: memCacheWidth,
+         memCacheHeight: memCacheHeight,
+         cacheKey: cacheKey,
+         maxWidthDiskCache: maxWidthDiskCache,
+         maxHeightDiskCache: maxHeightDiskCache,
+         fit: fit,
+         repeat: repeat,
+         matchTextDirection: matchTextDirection,
+       ) {
+    cloudinary ??= CloudinaryObject.cloudinary;
     cldImage = cloudinary.image(publicId);
     if (version != null) {
       cldImage.version(version);
@@ -89,29 +90,31 @@ class CldImageWidget extends CachedNetworkImage {
 
   @override
   Widget build(BuildContext context) {
-    var cacheManager = (configuration != null && !configuration!.cache)
-        ? NoDiskCacheManager.instance
-        : DefaultCacheManager();
+    var cacheManager =
+        (configuration != null && !configuration!.cache)
+            ? NoDiskCacheManager.instance
+            : DefaultCacheManager();
     return CachedNetworkImage(
-        imageUrl: cldImage.toString(),
-        cacheManager: cacheManager,
-        httpHeaders: super.httpHeaders,
-        imageBuilder: super.imageBuilder,
-        placeholder: super.placeholder,
-        errorWidget: super.errorWidget,
-        width: super.width,
-        height: super.height,
-        color: super.color,
-        filterQuality: super.filterQuality,
-        colorBlendMode: super.colorBlendMode,
-        placeholderFadeInDuration: super.placeholderFadeInDuration,
-        memCacheWidth: super.memCacheWidth,
-        memCacheHeight: super.memCacheHeight,
-        cacheKey: super.cacheKey,
-        maxWidthDiskCache: super.maxWidthDiskCache,
-        maxHeightDiskCache: super.maxHeightDiskCache,
-        fit: super.fit,
-        repeat: super.repeat,
-        matchTextDirection: super.matchTextDirection);
+      imageUrl: cldImage.toString(),
+      cacheManager: cacheManager,
+      httpHeaders: super.httpHeaders,
+      imageBuilder: super.imageBuilder,
+      placeholder: super.placeholder,
+      errorWidget: super.errorWidget,
+      width: super.width,
+      height: super.height,
+      color: super.color,
+      filterQuality: super.filterQuality,
+      colorBlendMode: super.colorBlendMode,
+      placeholderFadeInDuration: super.placeholderFadeInDuration,
+      memCacheWidth: super.memCacheWidth,
+      memCacheHeight: super.memCacheHeight,
+      cacheKey: super.cacheKey,
+      maxWidthDiskCache: super.maxWidthDiskCache,
+      maxHeightDiskCache: super.maxHeightDiskCache,
+      fit: super.fit,
+      repeat: super.repeat,
+      matchTextDirection: super.matchTextDirection,
+    );
   }
 }

@@ -4,7 +4,7 @@ import 'package:cloudinary_url_gen/transformation/transformation.dart';
 import 'package:cloudinary_url_gen/transformation/video_edit/transcode/transcode.dart';
 import 'package:cloudinary_url_gen/transformation/video_edit/transcode/transcode_actions.dart';
 import 'package:video_player/video_player.dart';
-import '../cloudinary_context.dart';
+import '../cloudinary_object.dart';
 import 'analytics/video_analytics.dart';
 import 'analytics/video_events_manager.dart';
 
@@ -51,19 +51,23 @@ class CldVideoController extends VideoPlayerController
     String? deliveryType,
     Transformation? transformation,
     bool? automaticStreamingProfile,
-  }) : super.networkUrl(_buildVideoUri(
-            publicId,
-            cloudinary,
-            version,
-            extension,
-            urlSuffix,
-            assetType,
-            deliveryType,
-            transformation,
-            automaticStreamingProfile)) {
+  }) : super.networkUrl(
+         _buildVideoUri(
+           publicId,
+           cloudinary,
+           version,
+           extension,
+           urlSuffix,
+           assetType,
+           deliveryType,
+           transformation,
+           automaticStreamingProfile,
+         ),
+       ) {
     eventsManager = VideoEventsManager(
-        cloudName: cloudinary?.config.cloudConfig.cloudName,
-        publicId: publicId);
+      cloudName: cloudinary?.config.cloudConfig.cloudName,
+      publicId: publicId,
+    );
   }
 
   static Uri _buildVideoUri(
@@ -77,7 +81,7 @@ class CldVideoController extends VideoPlayerController
     Transformation? transformation,
     bool? automaticStreamingProfile,
   ) {
-    cloudinary ??= CloudinaryContext.cloudinary;
+    cloudinary ??= CloudinaryObject.cloudinary;
     CldVideo video = cloudinary.video(publicId);
     ((version != null) ? video.version(version) : null);
     ((extension != null) ? video.extension(extension) : null);
@@ -87,8 +91,11 @@ class CldVideoController extends VideoPlayerController
 
     if ((automaticStreamingProfile != null && automaticStreamingProfile) &&
         transformation == null) {
-      video.transformation(Transformation()
-          .transcode(Transcode.streamingProfile(StreamingProfile.auto())));
+      video.transformation(
+        Transformation().transcode(
+          Transcode.streamingProfile(StreamingProfile.auto()),
+        ),
+      );
       video.extension('m3u8');
     } else {
       ((transformation != null) ? video.transformation(transformation) : null);
@@ -96,8 +103,11 @@ class CldVideoController extends VideoPlayerController
     return Uri.parse(video.toString());
   }
 
-  void setAnalytics(AnalyticsType analyticsType,
-      {String? cloudName, String? publicId}) {
+  void setAnalytics(
+    AnalyticsType analyticsType, {
+    String? cloudName,
+    String? publicId,
+  }) {
     switch (analyticsType) {
       case AnalyticsType.auto:
         eventsManager.trackingType = TrackingType.auto;
