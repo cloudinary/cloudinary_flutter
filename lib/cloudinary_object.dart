@@ -5,7 +5,6 @@ final sdkVersion = '1.3.0';
 
 /// Helper class to help users define the Cloudinary object to be used with their widgets
 class CloudinaryObject extends Cloudinary {
-  /// Static Cloudinary instance to be used as default for widgets
   static Cloudinary cloudinary = Cloudinary();
 
   CloudinaryObject.fromCloudName({required String cloudName})
