@@ -5,8 +5,6 @@ import 'package:cloudinary_url_gen/transformation/transformation.dart';
 import 'package:cloudinary_flutter/image/no_disk_cache_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-
-import '../cloudinary_context.dart';
 import 'cld_image_widget_configuration.dart';
 
 /// A widget that displays a Cloudinary-hosted image. Its constructor offers various attributes to customize image presentation.
@@ -20,7 +18,7 @@ class CldImageWidget extends CachedNetworkImage {
       {required String publicId,
       super.key,
       this.configuration,
-      Cloudinary? cloudinary,
+      required Cloudinary cloudinary,
       String? version,
       String? extension,
       String? urlSuffix,
@@ -65,7 +63,6 @@ class CldImageWidget extends CachedNetworkImage {
             fit: fit,
             repeat: repeat,
             matchTextDirection: matchTextDirection) {
-    cloudinary ??= CloudinaryContext.cloudinary;
     cldImage = cloudinary.image(publicId);
     if (version != null) {
       cldImage.version(version);
