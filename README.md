@@ -12,11 +12,11 @@ This Readme provides basic installation and usage information.
 
 ## Table of Contents
 - [Key Features](#key-features)
-- [Version Support](#Version-Support)
+- [Version Support](#version-support)
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Setup](#Setup)
-  - [Transform and Optimize Assets](#Transform-and-Optimize-Assets)
+  - [Setup](#setup)
+  - [Transform and Optimize Assets](#transform-and-optimize-assets)
 
 ## Key Features
 Transform and optimize assets. Visit our documentation to learn more about [media optimization](https://cloudinary.com/documentation/media_optimization) and [transformations](https://cloudinary.com/documentation/image_transformations).
@@ -31,8 +31,8 @@ To use this SDK, add the Flutter and Dart Cloudinary libraries as [dependencies 
 
 ```yaml
 dependencies:
-  cloudinary_flutter: ^1.0.0
-  cloudinary_url_gen: ^1.0.0
+  cloudinary_flutter: ^1.3.0
+  cloudinary_url_gen: ^1.8.0
 ```
 
 ## Usage
