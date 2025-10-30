@@ -1,4 +1,3 @@
-import 'package:cloudinary_flutter/cloudinary_context.dart';
 import 'package:cloudinary_flutter/cloudinary_object.dart';
 import 'package:cloudinary_flutter/video/analytics/video_analytics.dart';
 import 'package:cloudinary_flutter/video/cld_video_controller.dart';
@@ -10,9 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   SharedPreferences.setMockInitialValues({'user_id': '12345'});
-  CloudinaryContext.cloudinary =
-      Cloudinary.fromCloudName(cloudName: 'test_cloud');
-  CloudinaryContext.cloudinary.config.urlConfig.analytics = false;
+  Cloudinary cloudinary = CloudinaryObject.fromCloudName(cloudName: 'test_cloud');
+  cloudinary.config.urlConfig.analytics = false;
   group('CldVideoController Tests', () {
     test('CldVideoController.networkUrl() sets correct URI', () {
       final Uri testUri = Uri.parse('https://example.com/video.mp4');
@@ -36,6 +34,7 @@ void main() {
 
       final CldVideoController controller = CldVideoController(
         publicId: publicId,
+        cloudinary: cloudinary,
         version: version,
         extension: extension,
         assetType: assetType,
@@ -56,6 +55,7 @@ void main() {
 
       final CldVideoController controller = CldVideoController(
         publicId: publicId,
+        cloudinary: cloudinary,
         automaticStreamingProfile: true,
       );
 
@@ -74,6 +74,7 @@ void main() {
 
       final CldVideoController controller = CldVideoController(
         publicId: publicId,
+        cloudinary: cloudinary,
         transformation: transformation,
       );
 

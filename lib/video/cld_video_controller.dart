@@ -4,7 +4,6 @@ import 'package:cloudinary_url_gen/transformation/transformation.dart';
 import 'package:cloudinary_url_gen/transformation/video_edit/transcode/transcode.dart';
 import 'package:cloudinary_url_gen/transformation/video_edit/transcode/transcode_actions.dart';
 import 'package:video_player/video_player.dart';
-import '../cloudinary_context.dart';
 import 'analytics/video_analytics.dart';
 import 'analytics/video_events_manager.dart';
 
@@ -12,6 +11,7 @@ import 'dart:ui';
 
 class CldVideoController extends VideoPlayerController
     with VideoControllerListeners {
+  @override
   late final Uri uri;
   @override
   late VideoEventsManager eventsManager;
@@ -43,7 +43,7 @@ class CldVideoController extends VideoPlayerController
 
   CldVideoController({
     required String publicId,
-    Cloudinary? cloudinary,
+    required Cloudinary cloudinary,
     String? version,
     String? extension,
     String? urlSuffix,
@@ -62,13 +62,13 @@ class CldVideoController extends VideoPlayerController
             transformation,
             automaticStreamingProfile)) {
     eventsManager = VideoEventsManager(
-        cloudName: cloudinary?.config.cloudConfig.cloudName,
+        cloudName: cloudinary.config.cloudConfig.cloudName,
         publicId: publicId);
   }
 
   static Uri _buildVideoUri(
     String publicId,
-    Cloudinary? cloudinary,
+    Cloudinary cloudinary,
     String? version,
     String? extension,
     String? urlSuffix,
@@ -77,7 +77,6 @@ class CldVideoController extends VideoPlayerController
     Transformation? transformation,
     bool? automaticStreamingProfile,
   ) {
-    cloudinary ??= CloudinaryContext.cloudinary;
     CldVideo video = cloudinary.video(publicId);
     ((version != null) ? video.version(version) : null);
     ((extension != null) ? video.extension(extension) : null);
